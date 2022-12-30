@@ -13,7 +13,7 @@
                 Password Length
               </label>
               <div class="col-md-8">
-                <input type="number" name="length" class="form-control" id="length" min="4" max="16" placeholder="12">
+                <input type="number" name="length" class="form-control" id="length" min="4" max="16">
                 <small class="text-muted form-text">Length is available between 4 ~ 16</small>
               </div>
             </div>
@@ -67,6 +67,13 @@
                 <small class="text-muted form-text">These characters will not appear in the password</small>
               </div>
             </div>
+
+            {{!-- 產生密碼區塊 --}}
+            {{#if password}}
+            <div class="alert alert-info" role="alert">
+              <span class="mr-2">Your password is:</span> <code>{{password}}</code>
+            </div>
+            {{/if}}
 
             <button class="btn btn-success" type="submit">Generate Password</button>
           </form>
