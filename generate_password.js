@@ -28,6 +28,11 @@ function generatePassword(options) {
     collection = collection.filter((character) => !options.excludeCharacters.includes(character))
   }
 
+  // 判斷輸入資料是否正確
+  if(collection.length === 0){
+    return 'There is no valid character in your selection.'
+  }
+
   let password = ''
   for(let i = 1; i<= options.length; i++){
     password += sample(collection)

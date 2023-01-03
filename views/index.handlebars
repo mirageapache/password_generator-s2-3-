@@ -13,7 +13,8 @@
                 Password Length
               </label>
               <div class="col-md-8">
-                <input type="number" name="length" class="form-control" id="length" min="4" max="16">
+                <input type="number" name="length" class="form-control" id="length" min="4" max="16"
+                  value={{options.length}}>
                 <small class="text-muted form-text">Length is available between 4 ~ 16</small>
               </div>
             </div>
@@ -22,7 +23,8 @@
               <label for="lowercase" class="col-md-4 col-form-label">Include Lowercase Characters</label>
               <div class="col-md-8">
                 <div class="form-check form-check-inline">
-                  <input type="checkbox" class="form-check-input" id="lowercase" name="lowercase">
+                  <input type="checkbox" class="form-check-input" id="lowercase" name="lowercase" {{#if
+                    options.lowercase}}checked{{/if}}>
                   <label class="form-check-label" for="lowercase">(e.g. abcdefg)</label>
                 </div>
               </div>
@@ -32,7 +34,8 @@
               <label for="uppercase" class="col-md-4 col-form-label">Include Uppercase Characters</label>
               <div class="col-md-8">
                 <div class="form-check form-check-inline">
-                  <input type="checkbox" class="form-check-input" id="uppercase" name="uppercase">
+                  <input type="checkbox" class="form-check-input" id="uppercase" name="uppercase" {{#if
+                    options.uppercase}}checked{{/if}}>
                   <label class="form-check-label" for="uppercase">(e.g. ABCDEFG)</label>
                 </div>
               </div>
@@ -42,7 +45,8 @@
               <label for="numbers" class="col-md-4 col-form-label">Include Numbers</label>
               <div class="col-md-8">
                 <div class="form-check form-check-inline">
-                  <input type="checkbox" class="form-check-input" id="numbers" name="numbers">
+                  <input type="checkbox" class="form-check-input" id="numbers" name="numbers" {{#if
+                    options.numbers}}checked{{/if}}>
                   <label class="form-check-label" for="numbers">(e.g. 123456)</label>
                 </div>
               </div>
@@ -52,7 +56,8 @@
               <label for="symbols" class="col-md-4 col-form-label">Include Symbols</label>
               <div class="col-md-8">
                 <div class="form-check form-check-inline">
-                  <input type="checkbox" class="form-check-input" id="symbols" name="symbols">
+                  <input type="checkbox" class="form-check-input" id="symbols" name="symbols" {{#if
+                    options.symbols}}checked{{/if}}>
                   <label class="form-check-label" for="symbols">(e.g.@#$%)</label>
                 </div>
               </div>
